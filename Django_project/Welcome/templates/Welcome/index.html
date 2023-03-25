@@ -1,0 +1,18 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang ='ja'>
+
+
+<head>
+    <meta charset="utf-8">
+    <title>Welcome</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'Welcome/css/style.css' %}"/>
+</head>
+
+<body>
+    <h1>Welcome</h1>
+    <p>今日は、{{day}}です。天気は{{weather}}です。</p>
+</body>
+
+</html>
