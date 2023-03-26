@@ -1,0 +1,42 @@
+body {
+    width: 700px;
+    background-color: #eee;
+}
+
+h1 {
+    font-size: 2.2em;
+    font-weight: 600;
+    height: 50px;
+    background-color: #3cb371;
+    padding-left: 10px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 14px;
+}
+
+th {
+    background-color: aqua;
+}
+
+.th_id, .td_id {
+    width: 30px;
+}
+
+.th_name, .td_name {
+    width: 150px;
+}
+
+.th_mail, .td_mail {
+    width: 250px;
+}
+
+.th_gender, .td_gender, .th_age, .td_age {
+    width: 60px;
+}
+
+.th_address, .td_address {
+    width: 100px;
+}
