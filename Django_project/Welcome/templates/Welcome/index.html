@@ -13,11 +13,35 @@
 <body>
     <h1>Welcome</h1>
     <p>{{message|safe}}</p>
-    <form action="{% url 'index' %}" method="post">
-        {% csrf_token %}
+    <table>
+        <tr>
+            <th class="th_id">ID</th>
+            <th class="th_name">名前</th>
+            <th class="th_mail">メール</th>
+            <th class="th_gender">性別</th>
+            <th class="th_age">年齢</th>
+            <th class="th_address">住所</th>
+        </tr>
+    {% for item in data%}
+        <tr>
+            <td class="td_id">{{item.id}}</td>
+            <td class="td_name">{{item.name}}</td>
+            <td class="td_mail">{{item.mail}}</td>
+            <td class="td_gender">{% if item.gender == False %}男性{% endif%}
+                {% if item.gender == True %}女性{% endif%}
+            </td>
+            <td class="td_age">{{item.age}}</td>
+            <td class="td_address">{{item.address}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+    <!-- <form action="{% url 'index' %}" method="post"> -->
+        <!-- {% csrf_token %}
         {{ form.as_p}}
         <button type="submit">送信</button>
-    </form>
+    </form> -->
+
+
 </body>
 
 </html>

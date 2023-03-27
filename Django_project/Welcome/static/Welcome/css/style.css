@@ -18,3 +18,25 @@ p{
     font-size: 14px;
 
 }
+
+th{
+    background-color: aqua;
+
+}
+
+.th_id,.td_id{
+
+    width: 30px;
+
+}
+.th_name,.td_name{
+
+    width: 150px;
+
+}
+
+.th_mail,.td_mail{
+
+    width: 300px;
+
+}
