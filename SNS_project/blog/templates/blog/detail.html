@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+<style type="text/css">
+    body{
+        width: 70%;
+        margin: 0 auto;
+    }
+    h1{
+        font-weight: 400;
+        text-align: center;
+        color: #fff;
+        background-color: brown;
+
+    }
+
+</style>
+
+</head>
+
+
+
+<body>
+    <h1>My blog</h1>
+    <h3>{{ post.title }}</h3>
+    <p>{{ post.text }}</p>
+    <p>{{ post.posted_at }}</p>
+    <p>{{ post.updated_at }}</p>
+
+    <p><a href="{% url 'index' %}">indexに戻る </a></p>
+    <hr />
+
+</body>
+
+
+</html>
