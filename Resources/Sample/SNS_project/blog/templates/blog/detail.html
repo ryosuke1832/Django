@@ -1,0 +1,22 @@
+{% load static %}
+<!docktype html>
+<html lang="ja">
+<head>
+    <meta charset="utf-8">
+    <title>Blog</title>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}"
+</head>
+<body>
+    <img src="{% static 'blog/images/TopPhoto.jpg' %}">
+    <div class="container">
+    <h1>My Blog</h1>
+    <h3>{{post.title}}</h3>
+    <p>{{ post.text|linebreaks }}</p>
+    <img src="{{ post.image.url }}">
+    <p>{{ post.posted_at }}</p>
+    <p>{{ post.updated_at }}</p>
+    <p><a href="{% url 'index' %}">indexに戻る</a></p>
+    <hr />
+    </div>
+</body>
+</html>

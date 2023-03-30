@@ -1,25 +1,11 @@
-<!DOCTYPE html>
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="ja">
 
 <head>
     <meta charset="UTF-8">
     <title>Blog</title>
-<style type="text/css">
-    body{
-        width: 70%;
-        margin: 0 auto;
-    }
-    h1{
-        font-weight: 400;
-        text-align: center;
-        color: #fff;
-        background-color: brown;
-
-    }
-
-</style>
+    <link rel="stylesheet" href="{% static 'blog/css/style.css' %}">
 
 </head>
 
@@ -27,13 +13,26 @@
 
 <body>
     <h1>My blog</h1>
-    <h3>{{ post.title }}</h3>
-    <p>{{ post.text }}</p>
-    <p>{{ post.posted_at }}</p>
-    <p>{{ post.updated_at }}</p>
+    <img src="{% static 'blog/images/TopPhoto.jpg' %}">
+    <div class="container">
+    <h2>記事詳細ページ</h2>
+    <div>
+    <h3>タイトル：{{ post.title }}</h3>
+    <p class="day">投稿日 : {{ post.posted_at }}</p>
+    <p class="day">更新日 : {{ post.updated_at }}</p>
 
-    <p><a href="{% url 'index' %}">indexに戻る </a></p>
+        <div class="post_text">
+            <p>{{ post.text|linebreaks }}</p>
+        </div>
+
+        <div class="post_image">
+            <img src="{{ post.image.url }}" >
+        </div>
+
+    <p class="day"><a href="{% url 'index' %}">投稿記事一覧に戻る </a></p>
     <hr />
+    </div>
+    </div>
 
 </body>
 

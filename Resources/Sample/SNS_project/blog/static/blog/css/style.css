@@ -1,0 +1,15 @@
+img {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.container {
+    width:70%;
+    margin: 0 auto;
+}
+    h1 {
+        font-weight: 400;
+        text-align: center;
+        color: #fff;
+        background-color: #40e0d0;
+    }
